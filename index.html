@@ -259,10 +259,16 @@ src="photo.jpg">
 
 </div>
 
-audio id="bgMusic" loop>
+<audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mp3">
 </audio>
-<script>function toggleMusic(){
+<script>
+
+function showMessage(){
+  document.getElementById("message").style.display = "block";
+}
+
+function toggleMusic(){
 
   const music =
   document.getElementById("bgMusic");
@@ -274,20 +280,17 @@ audio id="bgMusic" loop>
   }
 }
 
-
-function showMessage(){
-  document.getElementById("message").style.display = "block";
-}
-
 function createHeart(){
 
-  const heart = document.createElement("div");
+  const heart =
+  document.createElement("div");
 
   heart.classList.add("heart");
 
   heart.innerHTML = "💖";
 
-  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.left =
+  Math.random() * 100 + "vw";
 
   heart.style.animationDuration =
   (Math.random() * 3 + 3) + "s";
@@ -306,7 +309,8 @@ setInterval(createHeart, 300);
 
 function createSparkle(){
 
-  const sparkle = document.createElement("div");
+  const sparkle =
+  document.createElement("div");
 
   sparkle.classList.add("sparkle");
 
@@ -317,6 +321,7 @@ function createSparkle(){
   Math.random() * 100 + "vh";
 
   document.body.appendChild(sparkle);
+
   setTimeout(() => {
     sparkle.remove();
   }, 3000);
