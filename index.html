@@ -259,17 +259,21 @@ src="photo.jpg">
 
 </div>
 
-<!-- SoundCloud Music -->
-<iframe
-width="0"
-height="0"
-scrolling="no"
-frameborder="no"
-allow="autoplay"
-src="https://w.soundcloud.com/player/?url=https://soundcloud.com/mu-binas/enhypen-polaroid-love-mp3?si=e8f794627a13422c9daca838642986df&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&auto_play=true&show_user=false">
-</iframe>
+audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+<script>function toggleMusic(){
 
-<script>
+  const music =
+  document.getElementById("bgMusic");
+
+  if(music.paused){
+    music.play();
+  }else{
+    music.pause();
+  }
+}
+
 
 function showMessage(){
   document.getElementById("message").style.display = "block";
